@@ -1,7 +1,7 @@
 import { DataTypes } from "@sequelize/core";
 import sequelize from "./_index";
 
-export const GameEvent = sequelize.define("Event", {
+export const GameEvent = sequelize.define("event", {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -49,7 +49,7 @@ export const GameEvent = sequelize.define("Event", {
     type: DataTypes.STRING,
     allowNull: true,
   },
-  c_version: {
-    type: DataTypes.ARRAY(DataTypes.STRING),
+  c_versions: {
+    type: DataTypes.ARRAY(DataTypes.TEXT),
   },
 });

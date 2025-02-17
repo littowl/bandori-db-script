@@ -17,16 +17,16 @@ async function main() {
   }
 
   GameEvent.belongsToMany(Member, {
-    through: "EventMembers",
+    through: "event_members",
     as: "members",
-    foreignKey: "eventId",
-    otherKey: "memberId",
+    foreignKey: "event_id",
+    otherKey: "member_id",
   });
   Member.belongsToMany(GameEvent, {
-    through: "EventMembers",
+    through: "event_members",
     as: "events",
-    foreignKey: "memberId",
-    otherKey: "eventId",
+    foreignKey: "member_id",
+    otherKey: "event_id",
   });
 
   await sequelize.sync({ force: true });

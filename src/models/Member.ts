@@ -1,9 +1,9 @@
 import { DataTypes } from "@sequelize/core";
 import sequelize from "./_index";
 
-export const Member = sequelize.define("Member", {
+export const Member = sequelize.define("member", {
   id: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.SMALLINT,
     primaryKey: true,
     unique: true,
   },
